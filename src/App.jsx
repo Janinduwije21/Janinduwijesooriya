@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import SplashScreen from './components/SplashScreen';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
@@ -41,6 +42,7 @@ function App() {
               <Contact />
             </motion.div>
         )}
+        <Analytics />
       </div>
   );
 }
