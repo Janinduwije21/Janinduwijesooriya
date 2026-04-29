@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://janinduwijesooriya.vercel.app/sitemap.xml
+
