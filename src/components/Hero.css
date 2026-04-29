@@ -299,15 +299,29 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    transform: translateY(25px);
+    transform: none;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 0 2rem;
   }
 
   .hero-content {
-    top: 15%;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    margin-top: calc(0.5rem + 100px);
+    margin-bottom: calc(0.5rem + -130px);
+    padding: 0 1.25rem;
   }
 
   .main-title {
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
   }
 
   .subtitle {
@@ -316,52 +330,70 @@
   }
 
   .character-wrapper {
-    left: -11%;
+    position: relative;
+    left: auto;
     right: auto;
     transform: none;
-    width: 420px;
-    height: 540px;
-    bottom: -80px;
+    width: 500px;
+    height: 500px;
+    margin-top: 100px;
+    z-index: 2;
+    margin-bottom: -148px
   }
 
   .info-card {
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 24px;
     padding: 1.5rem;
     text-align: center;
     position: relative !important;
-    bottom: 80px !important;
+    bottom: auto !important;
+    left: auto;
+    margin: 0 auto;
+    width: min(90%, 420px);
+    z-index: 3;
+    margin-top: 100px;
   }
 
   .info-name {
-    display: none;
-  }
-
-  .info-label {
-    display: none;
+    font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
   }
 
   .animated-circle {
-    width: 500px;
-    height: 500px;
-    bottom: -220px;
-    left: 15%;
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    top: calc(5.5rem + 50px);
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 
   .hero-bottom {
-    height: 55vh;
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-container {
-    transform: translateY(10px);
+    transform: none;
+    padding: 1rem 0 1.5rem;
   }
 
   .hero-content {
-    top: 18%;
+    margin-top: calc(0.25rem + 100px);
+    margin-bottom: calc(0.25rem + -50px);
     padding: 0 1rem;
   }
 
@@ -370,7 +402,7 @@
   }
 
   .main-title {
-    font-size: clamp(1.8rem, 10vw, 2.8rem);
+    font-size: clamp(1.4rem, 8.5vw, 2.2rem);
   }
 
   .subtitle {
@@ -379,43 +411,39 @@
   }
 
   .character-wrapper {
-    left: 2%;
-    right: auto;
-    transform: none;
-    width: 280px;
-    height: 420px;
-    bottom: 0;
+    width: 400px;
+    height: 400px;
+    margin-top: 46px;
+    margin-bottom: -146px
   }
 
   .animated-circle {
-    width: 380px;
-    height: 380px;
-    bottom: -190px;
+    width: 340px;
+    height: 340px;
+    top: calc(3.5rem + 20px);
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .info-card {
     padding: 1.25rem;
     position: relative !important;
-    bottom: 120px !important;
+    bottom: auto !important;
+    width: min(100%, 560px);
+    border-radius: 10px;
+    margin-top: 100px;
   }
 
   .info-name {
-    display: none;
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+    margin-bottom: 0.6rem;
   }
 
-  .info-label {
-    display: none;
-  }
-
-  .info-label {
-    font-size: 1.5rem;
-  }
-
-  .info-name {
-    font-size: 1.8rem;
-  }
-
-  .info-description {
-    font-size: 0.9rem;
+  .hero-bottom {
+    margin-top: 0.75rem;
+    gap: 1rem;
   }
 }
